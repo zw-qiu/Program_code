@@ -4,7 +4,7 @@ Homework
 
 （1）第4列（$4）表示基因或转录本在参考序列上的起始位置，第5列（$5）表示基因或转录本在参考序列上的终止位置。Exon的长度应该是$5-$4+1。
 
-（2）cat 1.gtf | awk '$1=="XI" && $3=="CDS"  {split ($10,x,";");name=x[1];gsub("\"","",name);print $5,name}' | sort -n | tail -10 
+（2）cat 1.gtf | awk '$1=="XI" && $3=="CDS"  {split ($10,x,";");name=x[1];gsub("\\"","",name);print $5,name}' | sort -n | tail -10 
 
 | End_CDS of chr XI | gene_id |
 | :---------------: | :-----: |
